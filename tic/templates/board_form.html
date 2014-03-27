@@ -1,0 +1,27 @@
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="Edge">
+        <link rel="stylesheet" href="http://slo.me/t3/css/t3.css">
+</head>
+
+
+
+	<form id="wrap" action="board_form.html" method="post">
+	{% csrf_token %}
+	{% for field in form %}
+		<input id="{{field.name }}" 
+			name="{{field.name}}" 
+			class="{{field.value}}" 
+			value="{{field.value}} "/>
+
+	{% endfor %}
+
+	</form>
+		 
+	<script src="http://slo.me/t3/js/t3.js"></script>					
+     
+	<form >
+		<input type="submit" id="newgame" value="New Game"   />
+                                        
+	</form>
+        
