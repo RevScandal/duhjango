@@ -3,16 +3,19 @@
         <meta http-equiv="X-UA-Compatible" content="Edge">
         <link rel="stylesheet" href="http://slo.me/tic/css/tic.css">
 </head>
-	
-	<form id="wrap" action="" method="post">
+	<div id='wrap'>
+	 {% for field in form %}
+                <div class="{{field.value}}"  id="{{field.name }}"  >
+                </div>
+        {% endfor %}
+
+	</div>
+		
+	<form  action="" method="post">
 	{% csrf_token %}
 	{% for field in form %}
-	
-		<div class="{{field.value}}"  id="{{field.name }}"  >
+		<input  "type=hidden"  name="{{field.name}}" class="{{field.value}}" value="{{field.value}}"/>
 		
-		<input  "type=hidden"  name="{{field.name}}" class="nosee" value="{{field.value}}"/>
-		
-		</div>
 	{% endfor %}
 		
 	</form>
@@ -20,7 +23,6 @@
 	<script src="http://slo.me/tic/js/tic.js">
 	</script>
 	<script>
-		tic.init()
 		{% if pick %}
 			tic.setsquare("{{pick}}",tic.xplayer)
 			document.forms[0]["{{pick}}"].value=tic.xplayer	
