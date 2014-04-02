@@ -1,3 +1,5 @@
 from django.contrib import admin
+from tic.models import TicBoard
 
-# Register your models here.
+
+admin.site.register(TicBoard)

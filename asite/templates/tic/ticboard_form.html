@@ -14,25 +14,28 @@
 		
 		</div>
 	{% endfor %}
-	
-	 <a href="/tic/play" id="newgame"> New Game </a>
-	
+		
 	</form>
 	
 	<script src="http://slo.me/tic/js/tic.js">
 	</script>
 	<script>
+		tic.init()
 		{% if pick %}
 			tic.setsquare("{{pick}}",tic.xplayer)
 			document.forms[0]["{{pick}}"].value=tic.xplayer	
 			tic.addclicks()
 		 {% endif %}
-		 
+			nNodes=document.querySelectorAll('div.n')
+			if (nNodes.length==0){
+				cascade.reset()
+			}	
 		 {% if wingroup|length == 3 %}
 			 {% for wg in wingroup %}
 				tic.setsquare("{{wg}}"," win ")
 			 {% endfor %}
-			tic.rmclicks()
+				tic.rmclicks()
+				cascade.reset()			
 		{% endif %}
 		
 		{% if freshboard %}

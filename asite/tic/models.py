@@ -22,6 +22,4 @@ class TicBoard(models.Model):
 	h=models.CharField(max_length=1, choices=nxo,default="n")
 	i=models.CharField(max_length=1, choices=nxo,default="n")
 
-	def __unicode__(self):
-		return '%i'%self.id
-		
+	
