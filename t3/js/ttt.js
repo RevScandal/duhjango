@@ -9,13 +9,14 @@ var foozie={
 var hulk={
 	name:'hulk',
 	squares:[],
+
 	//order in which Hulk makes moves
-	moves:["four","zero","two","six","eight","seven","one","three","five"],
+	moves:["four","one","zero","three","five","two","seven","six","eight"],
  	//if no block is needed, Hulk takes the first available move
 	findmove: function(){	
 		var used=tictac.usedsquares
 		var sel=null
-		if (hulk.squares[0] ==="four" && hulk.squares.length===1){
+/**		if (hulk.squares[0] ==="four" && hulk.squares.length===1){
 				var ml=tictac.middles.length
 				while(ml--){
 					var mid=tictac.middles[ml]
@@ -25,6 +26,7 @@ var hulk={
 					}		
 				}
 		}
+**/
 		var i=0
 		var hml=hulk.moves.length
 		while (i< hml){
@@ -39,14 +41,15 @@ var hulk={
 			
 			
 	picksquare: function(){
+			var sq=""
 			if (hulk.canhulkwin()==="win"){
 				return
 			}else if (hulk.chkwingroups()){
-				var sq=hulk.chkwingroups()				
+				sq=hulk.chkwingroups()				
 			}else if (hulk.chkmidgroups()){
-				var sq=hulk.chkmidgroups()	
+				sq=hulk.chkmidgroups()	
 			}else{
-				var sq=hulk.findmove()			
+				 sq=hulk.findmove()			
 			}
 			tictac.setsquare(sq,hulk)
 			tictac.mkclicks()	
@@ -289,7 +292,7 @@ var frontslide=function(el){
 	slidein()
 	function slidein(){
 		o=parseFloat(o)+chunk
-		el.style.backgroundSize=o+"% 100% "	
+		el.style.backgroundSize=o+"%  "	
 		if (o < 100 ){
 			setTimeout(slidein,swing(1-o))
 		}	

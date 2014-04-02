@@ -2,16 +2,16 @@ body{ }
 
 a {color:white;}
 
-div {font-size:2.5em;text-align:center;text-shadow:3px 2px 2px gray;font-family: 'Sans';}
+div,input {font-size:2.5em;text-align:center;text-shadow:3px 2px 2px gray;font-family: 'Sans';}
 
 #wrap {width:900px;border:2px dashed blue;margin-left:auto; margin-right:auto;}
 
-div.tictac, div.hulk,div.foozie {background:gray;float:left;border:2px solid white; }
+.tictac, .hulk,.foozie {background:gray;float:left;border:2px solid white; }
 div.toprow{ border: 3px black solid; width:auto;height:auto ;}
 		 
-div.hulk { background-image:url(../img/hulk.jpg);background-repeat:no-repeat;background-size:0%;}
+.hulk { background-image:url(../img/x.jpg);background-repeat:no-repeat;background-size:0%;background-position:left;}
 
-div.win{border-color: lime;}
+.win{border-color: lime;}
 					
-div.foozie { background-image:url(../img/foozie.jpg);background-repeat:no-repeat;background-size:0%;}
+.foozie { background-image:url(../img/o.jpg);background-repeat:no-repeat;background-size:0%;}
 
