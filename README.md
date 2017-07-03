@@ -1,4 +1,4 @@
-* Show Data Url Image
+## Show Data Url Image
 
 ```html
 <!DOCTYPE html>
