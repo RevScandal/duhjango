@@ -1,7 +1,7 @@
 Global Domination Via Data URLs and The File Reader Api.....The Super Easy Way.
 
 
-### The css file, styles.css
+* The css file, styles.css
 
 ```css
 		body {text-align: center;} 
@@ -19,7 +19,7 @@ Global Domination Via Data URLs and The File Reader Api.....The Super Easy Way.
 
 ## Data Url As Image Source
 
-### The html
+* The html
 
 ```html
 
@@ -43,7 +43,7 @@ Global Domination Via Data URLs and The File Reader Api.....The Super Easy Way.
 
 ```
 
-### The JavaScript file, 1.js
+* The JavaScript file, 1.js
 
 ```javascript
 
