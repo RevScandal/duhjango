@@ -194,4 +194,59 @@ Global Domination Via Data URLs and The File Reader Api.....The Super Easy Way.
 		var inFile=elInit("input");
 		inFile.onchange=process
 ```
+
+##  Show File As Data Url
+
+
+* The html
+
+```html
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Show File As Data Url </title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8">
+		<link rel="stylesheet" href="styles.css"> 
+	
+	</head>
+	<body>
+		<form>
+				<input  type="file">	
+		</form>	
+		<textarea rows="25" cols="80">
+		</textarea>
+	</body>
+	<script src="4.js"> </script>
+</html>
+```		
+
+* The JavaScript, 4.js 
+
+```JavaScript
+		// Display the file as a data url in the text area element
+		function showText(evt){
+			textArea.value=evt.target.result;
+		}
 		
+		// Get A reference to an element and clear it's value
+		function elInit(eltag){
+			var el=document.getElementsByTagName(eltag)[0];
+			el.value="";
+			return el	
+			}
+	
+
+		// When the file input element value changes,
+		// fire an event and read the file as text			
+		function process(evt){
+			var file = inFile.files[0];
+			var r=new FileReader();
+			r.onload=showText;
+			r.readAsDataURL(file);
+		}
+
+
+		var textArea=elInit("textarea");
+		var inFile=elInit("input");
+		inFile.onchange=process
+```		
