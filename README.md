@@ -1,5 +1,22 @@
 # Show Data Url Image
 
+* styles.css
+
+```css
+		body {text-align: center;} 
+		
+		img { width:23em;margin:2em;border-radius:1em}			
+		
+		video { height:90%;margin:2em;border-radius:1em}			
+		
+		textarea {margin:2em;border-radius:1em;padding:3em; text-align: left;}			
+			
+		form {width: 21em;border:thin solid gray; border-radius: .2em; 
+			padding:.5em;font-size: 1.3em; text-align: justify;}	
+			
+		form, textarea {background: #e0e0e0;}		
+```
+
 ```html
 <!DOCTYPE html>
 <html>
@@ -10,7 +27,7 @@
 	</head>
 	<body>
 		<form>
-				<input  type="file">	
+			<input  type="file">	
 		</form>
 		<img>
 		</img>
@@ -31,7 +48,6 @@
 		var inFile=document.querySelector("input")
 		inFile.value=""
 		inFile.onchange=pullFile
-
 	</script>
 </html>
 ```
@@ -44,11 +60,11 @@
 	<head>
 		<title> Play Data Url Video </title>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8">
-			<link rel="stylesheet" href="styles.css"> 
+		<link rel="stylesheet" href="styles.css"> 
 	</head>
 	<body>
 		<form>
-				<input type="file">	
+			<input type="file">	
 		</form>
 		<video>
 		</video>
@@ -97,7 +113,7 @@
 	</head>
 	<body>
 		<form>
-				<input  type="file">	
+			<input  type="file">	
 		</form>	
 		<textarea rows="25" cols="80">
 		</textarea>
@@ -124,6 +140,7 @@
 </html>
 ```
 #  Read File As Text 
+
 ```html
 <!DOCTYPE html>
 <html>
