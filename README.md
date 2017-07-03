@@ -35,6 +35,57 @@
 	</script>
 </html>
 ```
+
+# Play Data Url Video
+
+```html 
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Play Data Url Video </title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8">
+			<link rel="stylesheet" href="styles.css"> 
+	</head>
+	<body>
+		<form>
+				<input type="file">	
+		</form>
+		<video>
+		</video>
+	</body>
+	<script>
+	
+		function parseMime(media){
+			var mimetype= media.split(":")[1].split(";")[0]
+			return mimetype
+		}
+
+		function playVid(evt){
+			var vid= document.querySelector("video")
+			var media=evt.target.result
+			var mimetype=parseMime(media)
+			if (vid.canPlayType(mimetype)){
+				vid.controls=true
+				vid.src=media
+				vid.play()
+			}
+		}
+	
+		function pullFile(evt){
+			var file = inFile.files[0]
+			var r=new FileReader()
+			r.onload=playVid
+			r.readAsDataURL(file)
+		}
+
+		var inFile=document.querySelector("input")
+		inFile.value=""
+		inFile.onchange=pullFile
+
+	</script>
+</html>
+```
+
 ```html
 <!DOCTYPE html>
 <html>
