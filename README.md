@@ -80,7 +80,7 @@ Global Domination Via Data URLs and The File Reader Api.....The Super Easy Way.
 
 	
 
-### The html
+* The html
 
 ```html
 
@@ -104,7 +104,7 @@ Global Domination Via Data URLs and The File Reader Api.....The Super Easy Way.
 
 ```
 
-### The JavaScript file, 2.js
+* The JavaScript file, 2.js
 
 ```javascript
 		// Get A reference to an element and clear it's value
@@ -142,7 +142,7 @@ Global Domination Via Data URLs and The File Reader Api.....The Super Easy Way.
 ##  Read File As Text 
 
 
-### The html
+* The html
 
 ```html
 <!DOCTYPE html>
@@ -165,7 +165,7 @@ Global Domination Via Data URLs and The File Reader Api.....The Super Easy Way.
 ```
 
 
-### The JavaScript file, 3.js
+* The JavaScript file, 3.js
 
 ```javascript
 
