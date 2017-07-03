@@ -86,6 +86,44 @@
 </html>
 ```
 
+## Show File As Data Url
+```html
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Show File As Data Url </title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8">
+		<link rel="stylesheet" href="styles.css"> 
+	</head>
+	<body>
+		<form>
+				<input  type="file">	
+		</form>	
+		<textarea rows="25" cols="80">
+		</textarea>
+	</body>
+	<script>
+	
+		function showDataUrl(evt){
+			textArea.value=String(evt.target.result)
+		}
+
+		function pullFile(evt){
+			var file = inFile.files[0]
+			var r=new FileReader()
+			r.onload=showDataUrl
+			r.readAsDataURL(file)
+		}
+
+		var inFile=document.querySelector("input")
+		inFile.value=""
+		inFile.onchange=pullFile
+		var textArea=document.querySelector("textarea")
+		textArea.value=""
+	</script>
+</html>
+```
+##  Read File As Text 
 ```html
 <!DOCTYPE html>
 <html>
